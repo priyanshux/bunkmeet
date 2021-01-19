@@ -12,6 +12,6 @@ sudo mv chromedriver /usr/bin/chromedriver
 
 sudo chmod 755 /usr/bin/chromedriver
 
-
+rm chromedriver_linux64.zip
 
 sudo apt install -y python3 python3-pip python3-venv redis-server
