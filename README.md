@@ -55,4 +55,4 @@ Note that you need to be in the first bunkmeet directory before running these sc
 
 ## Components and How To Use
 
-![Components](https://github.com/priyanshux/bunkmeet/blob/media/images/worker.png?raw=true "Components")
+![Components](https://github.com/priyanshux/bunkmeet/blob/media/images/components.png?raw=true "Components")
