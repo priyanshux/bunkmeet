@@ -70,3 +70,29 @@ It only takes 3 commands to install and run Bunkmeet on Ubuntu/Debian:
 
 `./worker.sh` on terminal 2
 
+## Experimental Features
+
+Note that you do not need to install any of these features and are optional. Additionally, these features can potentionally throw bugs.
+
+### Running the worker headless
+
+Install `supervisor` on your system.
+
+Ubuntu/Debian users can do so using `sudo apt-get install supervisor`
+
+Make sure you're in the first Bunkmeet directory and run the following commands to set up Celery on Supervisor
+
+`sudo bunkmeet=$(pwd) && mkdir $bunkmeet/logs && touch $bunkmeet/logs/worker.out.log && touch $bunkmeet/logs/worker.err.log`
+
+`echo "[program:celery]\ncommand = $bunkmeet/venv/bin/celery -A bunkmeet.routes.celery worker --loglevel=info --without-gossip -P solo\ndirectory = $bunkmeet\nstdout_logfile = $bunkmeet/logs/worker.out.log\nstderr_logfile = $bunkmeet/logs/worker.out.log\nautostart=true\nautorestart = true\nstartsecs = 10\nstopwaitsecs = 600\nstopasgroup=true\npriority=1000" > temp_celery.conf`
+
+`sudo mv temp_celery.conf /etc/supervisor/conf.d/celery.conf && supervisorctl reload`
+
+Now go to `bunkmeet/two.py` and uncomment the following
+	# options.binary_location = "/usr/bin/google-chrome-stable"
+	# options.add_argument("--no-sandbox")
+	# options.add_argument("--headless")
+	# options.add_argument("--disable-dev-shm-usage")
+	# driver.set_window_size(1280, 1440)
+
+This should set up your worker in headless mode.
