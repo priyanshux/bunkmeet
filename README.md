@@ -27,7 +27,7 @@ Note that you need to be in the first bunkmeet directory before running these sc
 
 #### Arch Linux
 
-Make sure you have the following dependencies: `alsa-lib`, `gtk3`, `libcups`, `libxss`, `libxtst`, ` nss`, `xdg-utils`, `google-chrome` before installing `chromedriver` from AUR
+Make sure you have the following dependencies: `alsa-lib`, `gtk3`, `libcups`, `libxss`, `libxtst`, ` nss`, `google-chrome`, `xdg-utils` before installing `chromedriver` from AUR using
 
 `git clone https://aur.archlinux.org/chromedriver.git`
 
@@ -35,7 +35,7 @@ Make sure you have the following dependencies: `alsa-lib`, `gtk3`, `libcups`, `l
 
 `makepkg -si`
 
-`chromedriver` should be in `/usr/bin/chromedriver` (Important)
+`chromedriver` should be in `/usr/bin/` (Important)
 
 Install Python, Pip, Venv and Redis packages if you don't have them already:
 
@@ -54,4 +54,3 @@ Also install `python3`, `python3-pip`, `python3-venv` and `redis-server`.
 Note that you need to be in the first bunkmeet directory before running these scripts as they are path dependent. Running `./bunkmeet/pip.sh` will throw errors.
 
 ## Components and How To Use
-
