@@ -27,29 +27,26 @@ The first step on Ubuntu/Debian is pretty straightforward.
 
 
 #### Arch Linux
-Install prerequisites for chromedriver along with some Python and Redis packages:
 
 `pacman -Syy`
 
-`sudo pacman -S unzip xvfb libxi6 libgconf-2-4 google-chrome-stable`
+Make sure you have the following dependencies: `alsa-lib`, `gtk3`, `libcups`, `libxss`, `libxtst`, ` nss`, `xdg-utils`, `google-chrome` before running
 
-`wget https://chromedriver.storage.googleapis.com/87.0.4280.88/chromedriver_linux64.zip`
+`git clone https://aur.archlinux.org/chromedriver.git`
 
-`unzip chromedriver_linux64.zip`
+`cd chromedriver`
 
-Moving chromedriver to `/usr/bin/chromedriver` is important as this is selenium webdriver's executable path. (Default path)
+`makepkg -si`
 
-`sudo mv chromedriver /usr/bin/chromedriver`
+`chromedriver` should be in `/usr/bin/chromedriver` (Important)
 
-`sudo chmod 755 /usr/bin/chromedriver`
-
-`rm chromedriver_linux64.zip`
+Install Python, Pip, Venv and Redis packages if you don't have them already:
 
 `sudo pacman -S python3 python3-pip python3-venv redis-server`
 
 #### Other Linux distributions
 
-Manually install `chromedriver`, `xvfb` and related packages and move `chromedriver` to `/usr/bin/chromedriver`.
+Manually install `chromedriver`, its dependencies and move `chromedriver` to `/usr/bin/chromedriver`.
 
 Also install `python3`, `python3-pip`, `python3-venv` and `redis-server`.
 
