@@ -5,6 +5,18 @@ Bunkmeet is an easy-to-use user-friendly proxy bot who can act as your substitut
 
 ![Worker](https://github.com/priyanshux/bunkmeet/blob/media/images/worker.png?raw=true "Worker")
 
+## Quick Ubuntu/Debian Installation
+
+It only takes 3 commands to install and run Bunkmeet on Ubuntu/Debian:
+
+`./ubuntu.sh && ./pip.sh`
+
+ `./server.sh`  on terminal 1
+
+`./worker.sh` on terminal 2
+
+Same installation has been explained below.
+
 ## Installation
 
 ### Step 0 - Cloning the repository
@@ -59,16 +71,6 @@ Run `./worker.sh`  and do not close until all your tasks (lectures) have been ov
 - You can run only the server to send a task, close the server and run the worker anytime before your first lecture starts.
 
 - It is, however, recommended to keep the worker running while sending a task to confirm its proper functionality in real-time.
-
-## Quick Ubuntu/Debian Recap
-
-It only takes 3 commands to install and run Bunkmeet on Ubuntu/Debian:
-
-`./ubuntu.sh && ./pip.sh`
-
- `./server.sh`  on terminal 1
-
-`./worker.sh` on terminal 2
 
 ## Experimental Features
 
