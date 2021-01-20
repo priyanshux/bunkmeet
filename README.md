@@ -19,7 +19,7 @@ Bunkmeet is a proxy bot who can act as your substitute and attend online meeting
 
 ### Step 1 - Installing required packages
 #### Ubuntu/Debian
-The installation on Ubuntu/Debian is pretty straightforward.
+The first step on Ubuntu/Debian is pretty straightforward.
 
 `./ubuntu.sh`
 
@@ -57,3 +57,4 @@ Also install `python3`, `python3-pip`, `python3-venv` and `redis-server`.
 
 Note that you need to be in the first bunkmeet directory before running these scripts as they are path dependent. Running `./bunkmeet/install.sh` will throw errors.
 
+## Components and How To Use
