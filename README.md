@@ -91,7 +91,8 @@ Download [this](https://github.com/priyanshux/bunkmeet/blob/media/supervisor.sh)
 `mv supervisor.sh $bunkmeet && cd $bunkmeet`<br>
 `chmod 755 supervisor.sh && ./supervisor.sh`
 
-Now go to `bunkmeet/two.py` and uncomment the following<br>
+Now go to `bunkmeet/two.py` and uncomment the following:
+
 `# options.add_argument("--no-sandbox")`<br>
 `# options.add_argument("--headless")`<br>
 `# options.add_argument("--disable-dev-shm-usage")`<br>
