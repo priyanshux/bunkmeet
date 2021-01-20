@@ -76,7 +76,7 @@ Run `./worker.sh`  and do not close until all your tasks (lectures) have been ov
 
 Note that you do not need to install any of these features and are optional. Additionally, these features can potentionally show bugs.
 
-### Running the worker headless
+### Running the worker in background
 
 Install `supervisor` on your system.
 
@@ -96,4 +96,4 @@ Now go to `bunkmeet/two.py` and uncomment the following<br>
 `# options.add_argument("--disable-dev-shm-usage")`<br>
 `# driver.set_window_size(1280, 1440)`
 
-This should set up your worker in headless mode.
+This should set up your worker in background using headless mode.
