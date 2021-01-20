@@ -59,3 +59,14 @@ Run `./worker.sh`  and do not close until all your tasks (lectures) have been ov
 - You can run only the server to send a task, close the server and run the worker anytime before your first lecture starts.
 
 - It is, however, recommended to keep the worker running while sending a task to confirm its proper functionality in real-time.
+
+## Quick Ubuntu/Debian Recap
+
+It only takes 3 commands to install and run Bunkmeet on Ubuntu/Debian:
+
+`./ubuntu.sh && ./pip.sh`
+
+ `./server.sh`  on terminal 1
+
+`./worker.sh` on terminal 2
+
