@@ -86,7 +86,8 @@ def error():
 # DO NOT USE THE TEST ROUTE IN PRODUCTION
 @app.route('/test')
 def test():
-    return render_template('wait.html')
+    data = ['Test team 1', 'Test team2']
+    return render_template('success.html', data=data)
 
 
 @app.route('/finish', methods=['GET', 'POST'])
@@ -95,11 +96,13 @@ def finish():
     DATE = request.form.get("date")
     TIME = request.form.get("time")
     DURATION = request.form.get("duration")
+    SPEED = request.form.get("speed")
     lecture = Lecture(
         team=TEAM,
         date=DATE,
         time=TIME,
-        duration=DURATION
+        duration=DURATION,
+        speed=SPEED
     )
     db.session.add(lecture)
     db.session.commit()
@@ -112,12 +115,13 @@ def final():
     user = User.query.order_by(User.id.desc()).first()
     email = user.email
     password = user.password
-    eureka = Lecture.query.order_by(Lecture.id.desc()).first()
-    team = eureka.team
-    date = eureka.date
-    time = eureka.time
-    duration = eureka.duration
+    worker = Lecture.query.order_by(Lecture.id.desc()).first()
+    team = worker.team
+    date = worker.date
+    time = worker.time
+    duration = worker.duration
+    speed = worker.speed
     combine = date + time
     strp = datetime.strptime(combine, '%Y-%m-%d%H:%M')
     until = strp + timedelta(minutes=int(duration))
-    covid(email, password, team, strp, until)
+    covid(email, password, team, strp, until, speed)

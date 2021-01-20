@@ -17,7 +17,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 import pause as pause
 
 
-def covid(email, password, team, datetime, duration):
+def covid(email, password, team, datetime, duration, speed):
     global mute_mic, camera_off, webapp
     print("\n\n ____              _                        _   \n| __ ) _   _ _ __ | | ___ __ ___   ___  ___| |_ \n|  _ "
           "\| | | | '_ \| |/ / '_ ` _ \ / _ \/ _ \ __|\n| |_) | |_| | | | |   <| | | | | |  __/  __/ |_ \n|____/ \__,"
@@ -41,21 +41,28 @@ def covid(email, password, team, datetime, duration):
     driver = webdriver.Chrome(executable_path=PATH, options=options)
     driver.get("https://teams.microsoft.com/_#/school//?ctx=teamsGrid")
     # driver.set_window_size(1280, 1440)
+    
+    thirty = 30
+    sixty = 60
+    if speed == 'yes':
+        thirty = 60
+        sixty = 120
+
     ignored_exceptions = (NoSuchElementException, StaleElementReferenceException, ElementClickInterceptedException)
-    email_element = WebDriverWait(driver, 25, ignored_exceptions=ignored_exceptions).until(
+    email_element = WebDriverWait(driver, thirty, ignored_exceptions=ignored_exceptions).until(
         EC.presence_of_element_located((By.ID, "i0116"))
     )
     email_element.send_keys(email)
     email_element.send_keys(Keys.RETURN)
     time.sleep(2)
 
-    password_element = WebDriverWait(driver, 26, ignored_exceptions=ignored_exceptions).until(
+    password_element = WebDriverWait(driver, thirty, ignored_exceptions=ignored_exceptions).until(
         EC.presence_of_element_located((By.ID, "i0118"))
     )
     password_element.send_keys(password)
     time.sleep(3)
 
-    element = WebDriverWait(driver, 27, ignored_exceptions=ignored_exceptions).until(
+    element = WebDriverWait(driver, thirty, ignored_exceptions=ignored_exceptions).until(
         EC.presence_of_element_located((By.ID, "idSIButton9"))
     )
     element.click()
@@ -65,7 +72,7 @@ def covid(email, password, team, datetime, duration):
     actions.perform()
 
     try:
-        select_team = WebDriverWait(driver, 81, ignored_exceptions=ignored_exceptions).until(
+        select_team = WebDriverWait(driver, sixty, ignored_exceptions=ignored_exceptions).until(
             EC.presence_of_element_located((By.XPATH, teampath))
         )
         select_team.click()
@@ -73,19 +80,17 @@ def covid(email, password, team, datetime, duration):
         print("Invalid credentials or team name.")
         sys.exit(1)
 
-    # COMMENT OUT THE FOLLOWING IF YOU HAVE A STABLE INTERNET CONNECTION. THIS DELAYS THE PROGRAM BY 1 MINUTE
-    # CODE FOR UNSTABLE NETWORK STARTS (SEARCHING FOR RETRY BUTTON)
-    try:
-        join_call = WebDriverWait(driver, 60, ignored_exceptions=ignored_exceptions).until(
-            EC.presence_of_element_located((By.XPATH, "//button[@data-tid='tidConfirm']"))
-        )
-        join_call.click()
-    except TimeoutException:
-        pass
-    # CODE FOR UNSTABLE NETWORK ENDS
+    if speed == 'yes':
+        try:
+            join_call = WebDriverWait(driver, 100, ignored_exceptions=ignored_exceptions).until(
+                EC.presence_of_element_located((By.XPATH, "//button[@data-tid='tidConfirm']"))
+            )
+            join_call.click()
+        except TimeoutException:
+            pass
 
     try:
-        join_call = WebDriverWait(driver, 62, ignored_exceptions=ignored_exceptions).until(
+        join_call = WebDriverWait(driver, sixty, ignored_exceptions=ignored_exceptions).until(
             EC.presence_of_element_located((By.XPATH, "//button[@title='Join call with video']"))
         )
         join_call.click()
@@ -95,14 +100,14 @@ def covid(email, password, team, datetime, duration):
     except TypeError:
         pass
     except ElementNotInteractableException:
-        join_call = WebDriverWait(driver, 31, ignored_exceptions=ignored_exceptions).until(
+        join_call = WebDriverWait(driver, thirty, ignored_exceptions=ignored_exceptions).until(
             EC.presence_of_element_located((By.XPATH, "//button[@title='Join call with video']"))
         )
         time.sleep(5)
         join_call.click()
 
     try:
-        camera_off = WebDriverWait(driver, 60, ignored_exceptions=ignored_exceptions).until(
+        camera_off = WebDriverWait(driver, sixty, ignored_exceptions=ignored_exceptions).until(
             EC.presence_of_element_located((By.XPATH, "//span[@title='Turn camera off']"))
         )
         camera_off.click()
@@ -113,7 +118,7 @@ def covid(email, password, team, datetime, duration):
         camera_off.click()
 
     try:
-        mute_mic = WebDriverWait(driver, 33, ignored_exceptions=ignored_exceptions).until(
+        mute_mic = WebDriverWait(driver, thirty, ignored_exceptions=ignored_exceptions).until(
             EC.presence_of_element_located((By.XPATH, "//span[@title='Mute microphone']"))
         )
         mute_mic.click()
@@ -124,7 +129,7 @@ def covid(email, password, team, datetime, duration):
         mute_mic.click()
 
     try:
-        webapp = WebDriverWait(driver, 34, ignored_exceptions=ignored_exceptions).until(
+        webapp = WebDriverWait(driver, thirty, ignored_exceptions=ignored_exceptions).until(
             EC.presence_of_element_located((By.CLASS_NAME, "button-col"))
         )
         webapp.click()

@@ -26,7 +26,8 @@ class Lecture(db.Model):
     date = db.Column(db.String(20), nullable=False)
     time = db.Column(db.String(20), nullable=False)
     duration = db.Column(db.Integer, nullable=False)
+    speed = db.Column(db.String(5), nullable=False)
 
     def __repr__(self):
         return f"User(" \
-               f"'{self.team}', '{self.date}', '{self.time}', '{self.duration}')"
+               f"'{self.team}', '{self.date}', '{self.time}', '{self.duration}', '{self.speed}')"
