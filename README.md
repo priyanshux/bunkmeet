@@ -5,11 +5,6 @@ Bunkmeet is an easy-to-use user-friendly proxy bot who can act as your substitut
 
 ![Worker](https://github.com/priyanshux/bunkmeet/blob/media/images/worker.png?raw=true "Worker")
 
-## Table of Contents
-#### 1.  Installation
-#### 2.  Components and How To Use
-#### 3.  Frequently Asked Quesitons (FAQs)
-
 ## Installation
 
 ### Step 0 - Cloning the repository
