@@ -84,8 +84,8 @@ Make sure you're in the first Bunkmeet directory and run the following commands 
 
 `sudo bunkmeet=$(pwd)`
 
-Download [this](https://github.com/priyanshux/bunkmeet/blob/media/supervisor.sh) script and run the following:
-`mv supervisor.sh $bunkmeet && cd $bunkmeet`
+Download [this](https://github.com/priyanshux/bunkmeet/blob/media/supervisor.sh) script and run the following:<br>
+`mv supervisor.sh $bunkmeet && cd $bunkmeet`<br>
 `chmod 755 supervisor.sh && ./supervisor.sh`
 
 Now go to `bunkmeet/two.py` and uncomment the following<br>
