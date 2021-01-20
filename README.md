@@ -56,7 +56,7 @@ Run `./server.sh` on terminal 1 and go to http://localhost:5000/, you'll be prom
 
 ### Terminal 2
 
-Run `./worker.sh`  and do not close until all your tasks (lectures) have been over.
+Run `./worker.sh`  and do not close until all your tasks (lectures) have been executed.
 
 ### Note:
 
