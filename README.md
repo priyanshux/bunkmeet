@@ -28,9 +28,7 @@ The first step on Ubuntu/Debian is pretty straightforward.
 
 #### Arch Linux
 
-`pacman -Syy`
-
-Make sure you have the following dependencies: `alsa-lib`, `gtk3`, `libcups`, `libxss`, `libxtst`, ` nss`, `xdg-utils`, `google-chrome` before running
+Make sure you have the following dependencies: `alsa-lib`, `gtk3`, `libcups`, `libxss`, `libxtst`, ` nss`, `xdg-utils`, `google-chrome` before installing `chromedriver` from AUR
 
 `git clone https://aur.archlinux.org/chromedriver.git`
 
