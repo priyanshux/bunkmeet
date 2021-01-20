@@ -27,7 +27,7 @@ Note that you need to be in the first bunkmeet directory before running these sc
 
 #### Other Linux distributions
 
-Manually install `chromedriver`, its dependencies and move `chromedriver` to `/usr/bin/chromedriver`.
+Manually install `chromedriver`, its dependencies and move `chromedriver` to `/usr/bin/`. The executable path in Bunkmeet's webdriver is `/usr/bin/chromedriver`
 
 Also install `python3`, `python3-pip`, `python3-venv` and `redis-server`.
 
