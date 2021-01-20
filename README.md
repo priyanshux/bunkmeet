@@ -82,11 +82,11 @@ Ubuntu/Debian users can do so using `sudo apt-get install supervisor`
 
 Make sure you're in the first Bunkmeet directory and run the following commands to set up Celery on Supervisor
 
-`sudo bunkmeet=$(pwd) && mkdir $bunkmeet/logs && touch $bunkmeet/logs/worker.out.log && touch $bunkmeet/logs/worker.err.log`
+`sudo bunkmeet=$(pwd)`
 
-`echo "[program:celery]\ncommand = $bunkmeet/venv/bin/celery -A bunkmeet.routes.celery worker --loglevel=info --without-gossip -P solo\ndirectory = $bunkmeet\nstdout_logfile = $bunkmeet/logs/worker.out.log\nstderr_logfile = $bunkmeet/logs/worker.out.log\nautostart=true\nautorestart = true\nstartsecs = 10\nstopwaitsecs = 600\nstopasgroup=true\npriority=1000" > temp_celery.conf`
-
-`sudo mv temp_celery.conf /etc/supervisor/conf.d/celery.conf && supervisorctl reload`
+Download [this](https://github.com/priyanshux/bunkmeet/blob/media/supervisor.sh) script and run the following:
+`mv supervisor.sh $bunkmeet && cd $bunkmeet`
+`chmod 755 supervisor.sh && ./supervisor.sh`
 
 Now go to `bunkmeet/two.py` and uncomment the following<br>
 `# options.add_argument("--no-sandbox")`<br>
