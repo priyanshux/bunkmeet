@@ -4,7 +4,7 @@ sudo apt-get -y update
 
 sudo apt-get install -y unzip xvfb libxi6 libgconf-2-4 google-chrome-stable
 
-wget https://chromedriver.storage.googleapis.com/87.0.4280.88/chromedriver_linux64.zip
+wget https://chromedriver.storage.googleapis.com/88.0.4324.27/chromedriver_linux64.zip
 
 unzip chromedriver_linux64.zip
 
