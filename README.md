@@ -89,7 +89,6 @@ Make sure you're in the first Bunkmeet directory and run the following commands 
 `sudo mv temp_celery.conf /etc/supervisor/conf.d/celery.conf && supervisorctl reload`
 
 Now go to `bunkmeet/two.py` and uncomment the following<br>
-`# options.binary_location = "/usr/bin/google-chrome-stable"`<br>
 `# options.add_argument("--no-sandbox")`<br>
 `# options.add_argument("--headless")`<br>
 `# options.add_argument("--disable-dev-shm-usage")`<br>
