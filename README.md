@@ -72,7 +72,7 @@ Run `./worker.sh`  and do not close until all your tasks (lectures) have been ex
 
 - It is, however, recommended to keep the worker running while sending a task to confirm its proper functionality in real-time.
 
-## Experimental Features
+## Experimental Features (Optional)
 
 Note that you do not need to install any of these features and are optional. Additionally, these features can potentionally show bugs.
 
