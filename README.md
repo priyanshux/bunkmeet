@@ -57,9 +57,9 @@ Run `./worker.sh`  and do not close until all your tasks (lectures) have been ov
 
 - As stressed earlier, running `./bunkmeet/server.sh` or `./bunkmeet/worker.sh` will throw errors. You need to `cd` into the first bunkmeet directory using `cd bunkmeet` before running any of these scripts.
 
-- The worker and server are separate and don't depend on each other. You don't need to run both `./server.sh` and `./worker.sh` together for Bunkmeet to work.
-
 - The worker does the tasks on first come first serve basis. Make sure you send the task to attend an 8AM lecture before the task for 10AM and so on.
+
+- The worker and server are separate and don't depend on each other. You don't need to run both `./server.sh` and `./worker.sh` together for Bunkmeet to work.
 
 - You can run only the server to send a task, close the server and run the worker anytime before your first lecture starts.
 
