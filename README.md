@@ -1,9 +1,9 @@
 # Bunkmeet — A Proxy Bot
 Bunkmeet is an easy-to-use user-friendly proxy bot who can act as your substitute and attend online meetings or classes hosted on Microsoft Teams.
 
-![Bunkmeet](https://github.com/priyanshux/bunkmeet/blob/main/bunkmeet/static/images/readme.png?raw=true "Bunkmeet")
+![Bunkmeet](https://github.com/priyanshux/bunkmeet/blob/media/images/readme.png?raw=true "Bunkmeet")
 
-![Worker](https://github.com/priyanshux/bunkmeet/blob/main/bunkmeet/static/images/worker.png?raw=true "Worker")
+![Worker](https://github.com/priyanshux/bunkmeet/blob/media/images/worker.png?raw=true "Worker")
 
 ## Table of Contents
 #### 1.  Installation
@@ -54,3 +54,5 @@ Also install `python3`, `python3-pip`, `python3-venv` and `redis-server`.
 Note that you need to be in the first bunkmeet directory before running these scripts as they are path dependent. Running `./bunkmeet/pip.sh` will throw errors.
 
 ## Components and How To Use
+
+![Components](https://github.com/priyanshux/bunkmeet/blob/media/images/worker.png?raw=true "Components")
