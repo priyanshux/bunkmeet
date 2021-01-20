@@ -3,6 +3,8 @@ Bunkmeet is a proxy bot who can act as your substitute and attend online classes
 
 ![Bunkmeet](https://github.com/priyanshux/bunkmeet/blob/main/bunkmeet/static/images/readme.png?raw=true "Bunkmeet")
 
+![Worker](https://github.com/priyanshux/bunkmeet/blob/main/bunkmeet/static/images/worker.png?raw=true "Worker")
+
 ## Table of Contents
 #### 1.  Installation
 #### 2.  Components and How To Use
