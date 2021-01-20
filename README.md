@@ -89,10 +89,10 @@ Make sure you're in the first Bunkmeet directory and run the following commands 
 `sudo mv temp_celery.conf /etc/supervisor/conf.d/celery.conf && supervisorctl reload`
 
 Now go to `bunkmeet/two.py` and uncomment the following
-	# options.binary_location = "/usr/bin/google-chrome-stable"
+`	# options.binary_location = "/usr/bin/google-chrome-stable"
 	# options.add_argument("--no-sandbox")
 	# options.add_argument("--headless")
 	# options.add_argument("--disable-dev-shm-usage")
-	# driver.set_window_size(1280, 1440)
+	# driver.set_window_size(1280, 1440)`
 
 This should set up your worker in headless mode.
