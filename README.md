@@ -25,22 +25,6 @@ The first step on Ubuntu/Debian is pretty straightforward.
 
 Note that you need to be in the first bunkmeet directory before running these scripts as they are path dependent. Running `./bunkmeet/ubuntu.sh` will throw errors.
 
-#### Arch Linux
-
-Make sure you have the following dependencies: `alsa-lib`, `gtk3`, `libcups`, `libxss`, `libxtst`, ` nss`, `google-chrome`, `xdg-utils` before installing `chromedriver` from AUR using
-
-`git clone https://aur.archlinux.org/chromedriver.git`
-
-`cd chromedriver`
-
-`makepkg -si`
-
-`chromedriver` should be in `/usr/bin/` (Important)
-
-Install Python, Pip, Venv and Redis packages if you don't have them already:
-
-`sudo pacman -S python3 python3-pip python3-venv redis-server`
-
 #### Other Linux distributions
 
 Manually install `chromedriver`, its dependencies and move `chromedriver` to `/usr/bin/chromedriver`.
