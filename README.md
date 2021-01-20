@@ -23,6 +23,7 @@ The first step on Ubuntu/Debian is pretty straightforward.
 
 `./ubuntu.sh`
 
+Note that you need to be in the first bunkmeet directory before running these scripts as they are path dependent. Running `./bunkmeet/ubuntu.sh` will throw errors.
 
 #### Arch Linux
 
