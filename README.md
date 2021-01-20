@@ -48,9 +48,9 @@ Also install `python3`, `python3-pip`, `python3-venv` and `redis-server`.
 
 ### Step 2 - Running script for pip packages
 
-`./install.sh`
+`./pip.sh`
 
-Note that you need to be in the first bunkmeet directory before running these scripts as they are path dependent. Running `./bunkmeet/install.sh` will throw errors.
+Note that you need to be in the first bunkmeet directory before running these scripts as they are path dependent. Running `./bunkmeet/pip.sh` will throw errors.
 
 ## Components and How To Use
 
