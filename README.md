@@ -72,7 +72,7 @@ It only takes 3 commands to install and run Bunkmeet on Ubuntu/Debian:
 
 ## Experimental Features
 
-Note that you do not need to install any of these features and are optional. Additionally, these features can potentionally throw bugs.
+Note that you do not need to install any of these features and are optional. Additionally, these features can potentionally show bugs.
 
 ### Running the worker headless
 
