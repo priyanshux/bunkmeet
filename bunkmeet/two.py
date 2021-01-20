@@ -26,21 +26,16 @@ def covid(email, password, team, datetime, duration):
     print("I work for Bunkmeet and we're both good. I shall attend {} for you.".format(team))
     print("Once I've joined, I'll keep checking if I'm still in the lecture every minute.")
     print("I shall rejoin the lecture in case your call has been dropped.\n")
-    # datetime_comment = datetime
     pause.until(datetime)
     XPATH = "/html/body/div[2]/div[2]/div[2]/div[1]/teams-grid/div/div[2]/div[1]/div/div/div[1]//div[" \
             "@data-tid='team-"
     teampath = XPATH + team + "']"
-
-    # USE THE FOLLOWING FOR RUNNING LOCALLY
 
     options = webdriver.ChromeOptions()
     # options.binary_location = "/usr/bin/google-chrome-stable"
     # options.add_argument("--no-sandbox")
     # options.add_argument("--headless")
     # options.add_argument("--disable-dev-shm-usage")
-    # options.add_experimental_option("excludeSwitches", ["enable-automation"])
-    # options.add_experimental_option('useAutomationExtension', False)
     options.add_argument("--use-fake-ui-for-media-stream")
     PATH = '/usr/bin/chromedriver'
     driver = webdriver.Chrome(executable_path=PATH, options=options)
@@ -64,17 +59,10 @@ def covid(email, password, team, datetime, duration):
         EC.presence_of_element_located((By.ID, "idSIButton9"))
     )
     element.click()
-    # time.sleep(1)
 
     actions = ActionChains(driver)
     actions.send_keys(Keys.RETURN)
     actions.perform()
-
-    #   webapp = WebDriverWait(driver, 10, ignored_exceptions=ignored_exceptions).until(
-    #      EC.presence_of_element_located((By.LINK_TEXT, "Use the web app instead"))
-    # )
-    # webapp.click()
-    # time.sleep(15)
 
     try:
         select_team = WebDriverWait(driver, 81, ignored_exceptions=ignored_exceptions).until(
@@ -87,13 +75,13 @@ def covid(email, password, team, datetime, duration):
 
     # COMMENT OUT THE FOLLOWING IF YOU HAVE A STABLE INTERNET CONNECTION. THIS DELAYS THE PROGRAM BY 1 MINUTE
     # CODE FOR UNSTABLE NETWORK STARTS (SEARCHING FOR RETRY BUTTON)
-    # try:
-    #     join_call = WebDriverWait(driver, 60, ignored_exceptions=ignored_exceptions).until(
-    #         EC.presence_of_element_located((By.XPATH, "//button[@data-tid='tidConfirm']"))
-    #     )
-    #     join_call.click()
-    # except TimeoutException:
-    #     pass
+    try:
+        join_call = WebDriverWait(driver, 60, ignored_exceptions=ignored_exceptions).until(
+            EC.presence_of_element_located((By.XPATH, "//button[@data-tid='tidConfirm']"))
+        )
+        join_call.click()
+    except TimeoutException:
+        pass
     # CODE FOR UNSTABLE NETWORK ENDS
 
     try:
@@ -112,7 +100,6 @@ def covid(email, password, team, datetime, duration):
         )
         time.sleep(5)
         join_call.click()
-    # time.sleep(5)
 
     try:
         camera_off = WebDriverWait(driver, 60, ignored_exceptions=ignored_exceptions).until(

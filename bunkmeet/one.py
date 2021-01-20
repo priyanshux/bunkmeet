@@ -14,7 +14,6 @@ import time
 def chrome_options():
     global options
     options = webdriver.ChromeOptions()
-    # options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
     options.add_argument("--no-sandbox")
     options.add_argument("--headless")
     options.add_argument("--disable-dev-shm-usage")
@@ -24,10 +23,6 @@ def chrome_options():
 def bunk(email, password):
     global teams
     chrome_options()
-    # USE THE FOLLOWING FOR RUNNING FOR PRODUCTION
-    # driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=options)
-
-    # USE THE FOLLOWING FOR RUNNING LOCALLY
     PATH = '/usr/bin/chromedriver'
     driver = webdriver.Chrome(executable_path=PATH, options=options)
     driver.get("https://teams.microsoft.com/_#/school//?ctx=teamsGrid")
@@ -54,13 +49,7 @@ def bunk(email, password):
     actions = ActionChains(driver)
     actions.send_keys(Keys.RETURN)
     actions.perform()
-    time.sleep(2)
-
-    # webapp = WebDriverWait(driver, 25, ignored_exceptions=ignored_exceptions).until(
-    #     EC.presence_of_element_located((By.LINK_TEXT, "Use the web app instead"))
-    # )
-    # webapp.click()
-    time.sleep(6)
+    time.sleep(7)
 
     try:
         t4sne = WebDriverWait(driver, 50, ignored_exceptions=ignored_exceptions).until(

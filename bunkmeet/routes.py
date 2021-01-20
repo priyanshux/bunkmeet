@@ -40,9 +40,6 @@ def attend():
     except OperationalError:
         db.create_all()
         team = Teams.query.order_by(Teams.id.desc()).first()
-        # global message
-        # message = "Database not found"
-        # return redirect(url_for('error'))
     try:
         load = json.loads(team.teams)
         data = load['array']
@@ -122,6 +119,5 @@ def final():
     duration = eureka.duration
     combine = date + time
     strp = datetime.strptime(combine, '%Y-%m-%d%H:%M')
-    # strp = strp - timedelta(minutes=330)  # +5:30 GMT
     until = strp + timedelta(minutes=int(duration))
     covid(email, password, team, strp, until)
