@@ -10,21 +10,21 @@ Bunkmeet is a proxy bot who can act as your substitute and attend online meeting
 
 ## Installation
 
-#### Step 0 - Cloning the repository
+### Step 0 - Cloning the repository
 `git clone https://github.com/priyanshux/bunkmeet`
 
 `cd bunkmeet`
 
 `sudo chmod 755 ubuntu.sh install.sh server.sh worker.sh`
 
-#### Step 1 - Installing required packages
-##### Ubuntu/Debian
+### Step 1 - Installing required packages
+#### Ubuntu/Debian
 The installation on Ubuntu/Debian is pretty straightforward.
 
 `./ubuntu.sh`
 
 
-##### Arch Linux
+#### Arch Linux
 Install prerequisites for chromedriver along with some Python and Redis packages:
 
 `pacman -Syy`
@@ -45,13 +45,13 @@ Moving chromedriver to `/usr/bin/chromedriver` is important as this is selenium 
 
 `sudo pacman -S python3 python3-pip python3-venv redis-server`
 
-##### Other Linux distributions
+#### Other Linux distributions
 
 Manually install `chromedriver`, `xvfb` and related packages and move `chromedriver` to `/usr/bin/chromedriver`.
 
 Also install `python3`, `python3-pip`, `python3-venv` and `redis-server`.
 
-#### Step 2 - Running script for pip packages
+### Step 2 - Running script for pip packages
 
 `./install.sh`
 
