@@ -17,10 +17,6 @@ Bunkmeet is an easy-to-use user-friendly proxy bot who can act as your substitut
 
 `cd bunkmeet`
 
-Change permissions for the .sh files (Important)
-
-`sudo chmod 755 ubuntu.sh install.sh server.sh worker.sh`
-
 ### Step 1 - Installing required packages
 #### Ubuntu/Debian
 The first step on Ubuntu/Debian is pretty straightforward.
