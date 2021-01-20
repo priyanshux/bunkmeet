@@ -84,9 +84,10 @@ Ubuntu/Debian users can do so using `sudo apt-get install supervisor`
 
 Make sure you're in the first Bunkmeet directory and run the following commands to set up Celery on Supervisor
 
-`sudo bunkmeet=$(pwd)`
+`bunkmeet=$(pwd)`
 
-Download [this](https://github.com/priyanshux/bunkmeet/blob/media/supervisor.sh) script and run the following:<br>
+Download [this](https://github.com/priyanshux/bunkmeet/blob/media/supervisor.sh) script and run the following:
+
 `mv supervisor.sh $bunkmeet && cd $bunkmeet`<br>
 `chmod 755 supervisor.sh && ./supervisor.sh`
 
