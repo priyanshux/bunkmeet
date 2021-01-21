@@ -1,6 +1,8 @@
 # Bunkmeet — A Proxy Bot
 Bunkmeet is an easy-to-use user-friendly proxy bot who can act as your substitute and attend online meetings or classes hosted on Microsoft Teams.
 
+How to install and run Bunkmeet - https://youtu.be/GFGXuKpEE5c
+
 ![Bunkmeet](https://github.com/priyanshux/bunkmeet/blob/media/images/readme.png?raw=true "Bunkmeet")
 
 ![Worker](https://github.com/priyanshux/bunkmeet/blob/media/images/worker.png?raw=true "Worker")
