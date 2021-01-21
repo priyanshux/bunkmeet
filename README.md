@@ -3,8 +3,6 @@ Bunkmeet is an easy-to-use user-friendly proxy bot who can act as your substitut
 
 How to install and run Bunkmeet — https://youtu.be/GFGXuKpEE5c
 
-[Join the Slack workspace](https://join.slack.com/t/newworkspace-wb25163/shared_invite/zt-l6pk72r7-fp07w8NPtK0Z4_DHosrhBg)
-
 <sup>(Note: Links don't open in new tab)</sup>
 
 ![Bunkmeet](https://github.com/priyanshux/bunkmeet/blob/media/images/readme.png?raw=true "Bunkmeet")
@@ -105,3 +103,8 @@ Now go to `bunkmeet/two.py` and uncomment the following:
 `# driver.set_window_size(1280, 1440)`
 
 This should set up your worker in background using headless mode.
+
+## Contribution
+
+[Join the Slack workspace](https://join.slack.com/t/newworkspace-wb25163/shared_invite/zt-l6pk72r7-fp07w8NPtK0Z4_DHosrhBg)
+
