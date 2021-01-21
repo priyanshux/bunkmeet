@@ -3,7 +3,7 @@ Bunkmeet is an easy-to-use user-friendly proxy bot who can act as your substitut
 
 How to install and run Bunkmeet — https://youtu.be/GFGXuKpEE5c
 
-[Join the Slack workspace](https://join.slack.com/t/newworkspace-wb25163/shared_invite/zt-l6pk72r7-fp07w8NPtK0Z4_DHosrhBg) <sub>Links don't open in new tab</sub>
+[Join the Slack workspace](https://join.slack.com/t/newworkspace-wb25163/shared_invite/zt-l6pk72r7-fp07w8NPtK0Z4_DHosrhBg) <sub>    Note: Links don't open in new tab</sub>
 
 ![Bunkmeet](https://github.com/priyanshux/bunkmeet/blob/media/images/readme.png?raw=true "Bunkmeet")
 
