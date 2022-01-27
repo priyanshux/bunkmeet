@@ -25,7 +25,7 @@ def bunk(email, password):
     chrome_options()
     PATH = '/usr/bin/chromedriver'
     driver = webdriver.Chrome(executable_path=PATH, options=options)
-    driver.get("https://teams.microsoft.com/_#/school//?ctx=teamsGrid")
+    driver.get("https://teams.microsoft.com/_#/school/teams-grid/General?ctx=teamsGrid")
     ignored_exceptions = (NoSuchElementException, StaleElementReferenceException, ElementClickInterceptedException)
     email_element = WebDriverWait(driver, 50, ignored_exceptions=ignored_exceptions).until(
         EC.presence_of_element_located((By.ID, "i0116"))
