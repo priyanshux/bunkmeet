@@ -39,7 +39,7 @@ def covid(email, password, team, datetime, duration, speed):
     options.add_argument("--use-fake-ui-for-media-stream")
     PATH = '/usr/bin/chromedriver'
     driver = webdriver.Chrome(executable_path=PATH, options=options)
-    driver.get("https://teams.microsoft.com/_#/school//?ctx=teamsGrid")
+    driver.get("https://teams.microsoft.com/_#/school/teams-grid/General?ctx=teamsGrid")
     # driver.set_window_size(1280, 1440)
     
     thirty = 30
